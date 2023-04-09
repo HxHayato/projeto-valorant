@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+    margin: 0 auto;
+    background-color: #1F2326;
+    color: #ffffff;
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+header {
+    position: fixed;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+nav {
+    background-color: transparent;
+    padding: 30px 9%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav button{
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.compartilhar {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1.75rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.compartilhar:hover {
+    transform: translateY(-8px);
+    transition: all .50s ease-in-out;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.clip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FF4656;
+    clip-path: polygon(100% 100%, 100% 0, 20% 100%);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.conteudo {
+    padding: 0 0 0 9vw ;
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8% 0;
+}
+
+.valorant-icone {
+    height: 60px;
+    object-fit: contain;
+}
+
+.personagem {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #FF4656;
+    position: relative;
+    max-width: 100vw;
+    max-height: 100vw;
+    width: 140px;
+    height: 140px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card h1 {
+    background-color: #1F232685;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    transition: all .50s ease;
+    opacity: 0;
+}
+
+.card:hover h1 {
+    opacity: 1;
+}
+
+.imagem{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.imagem img {
+    max-width: 100%;
+    max-height: 70%;
+    object-fit: cover;
+}
+
+footer {
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    display: none;
+}
+
+footer button {
+    display: block;
+    justify-self: center;
+    align-self: center;
+}
+
+@media Screen and (max-width: 950px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .clip {
+        clip-path: polygon(100% 100%, 100% 0, 10% 100%);
+    }
+
+    .conteudo {
+        padding: 0 9vw ;
+        max-width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8% 0;
+    }
+    
+    .imagem {
+        display: none;
+    }
+}
+
+@media Screen and (max-width: 550px) {
+    nav .compartilhar {
+        display: none;
+    }
+    
+    .clip {
+        clip-path: polygon(100% 100%, 100% 0, 0 100%);
+    }
+
+    .personagem {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .valorant-icone {
+        display: none;
+    }
+
+    .card {
+        max-width: 20vh;
+        max-height: 20vh;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
